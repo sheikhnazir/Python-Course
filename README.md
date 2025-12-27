@@ -1,4 +1,4 @@
-# 🐍 Python Programming Course
+#  Python Programming Course
 
 Welcome to the **Python Programming Course** repository.  
 This course is designed to teach **Python from basics to advanced concepts** in a simple and practical way.
