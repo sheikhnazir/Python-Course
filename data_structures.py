@@ -63,3 +63,57 @@ if __name__ == "__main__":
     # Loop through each element in the list
     for n in list_numbers:
         print(n)
+
+    # ----------------------------
+    # SET → Unique elements & Fast lookup
+    # ----------------------------
+
+    # Creating a set (duplicates are NOT allowed)
+    roll_numbers = {1, 2, 3}
+    print(roll_numbers)
+
+    # Add a new element to the set
+    # Sets automatically avoid duplicates
+    roll_numbers.add(4)
+    print(roll_numbers)
+
+    # Sets can contain mixed data types
+    roll_numbers.add("a")
+    print(roll_numbers)
+
+    # Remove a specific element from the set
+    # If the element does not exist → KeyError
+    roll_numbers.remove(2)
+    print(roll_numbers)
+
+    # Remove and return a random element from the set
+    # (Sets are unordered, so we don’t know which element will be removed)
+    roll_numbers.pop()
+    print(roll_numbers)
+
+    # ----------------------------
+    # Set Operations
+    # ----------------------------
+
+    set1 = {1, 2, 3}
+    set2 = {4, 5, 6, 3}
+
+    # Union → All unique elements from both sets
+    print(set1 | set2)
+
+    # Intersection → Common elements in both sets
+    print(set1 & set2)
+
+    # Difference → Elements present in set1 but not in set2
+    print(set1 - set2)
+
+    # Difference → Elements present in set2 but not in set1
+    print(set2 - set1)
+
+    # ----------------------------
+    # Dictionary (Next Topic)
+    # ----------------------------
+
+
+
+
