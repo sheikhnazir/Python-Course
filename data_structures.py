@@ -111,8 +111,66 @@ if __name__ == "__main__":
     print(set2 - set1)
 
     # ----------------------------
-    # Dictionary (Next Topic)
-    # ----------------------------
+    # --- Dictionary ---
+    # Dictionaries store data in key:value pairs.
+    # Characteristics: Ordered (since Python 3.7), Changeable, and No Duplicate Keys.
+
+    # Initializing a dictionary
+    my_car = {
+        "brand": "Suzuki",
+        "Model": 2024,
+        "Model": 2025,  # Duplicate keys are not allowed; "2025" will override "2024"
+        "Variant": "K10",
+        "Colour": "White"
+    }
+
+    # Printing the entire dictionary
+    print(my_car)
+
+    # Accessing specific values using their keys
+    print(my_car["brand"], " : ", my_car["Model"])
+
+    # --- Modifying Data ---
+    # Dictionaries are 'Changeable', meaning we can update values of existing keys
+    my_car["Colour"] = "Black"
+    my_car["Variant"] = "K20"
+    print(my_car)
+
+    # --- Removing Data ---
+    # Using 'del' to remove a specific key-value pair
+    del my_car["Colour"]
+    print(my_car)
+
+    # Adding a new key-value pair back into the dictionary
+    my_car["Colour"] = "White"
+    print(my_car)
+
+    # --- Iteration Methods ---
+
+    # 1. Iterating through keys (default behavior)
+    print("\nKeys:")
+    for key in my_car:
+        print(key)
+
+    # 2. Iterating through values only using .values()
+    print("\nValues:")
+    for value in my_car.values():
+        print(value)
+
+    # 3. Iterating through both keys and values using .items()
+    print("\nKey-Value Pairs:")
+    for key, value in my_car.items():
+        print(key, value)
+
+    # Checking the number of items (key-value pairs) in the dictionary
+    print("\nDictionary Length:", len(my_car))
+
+
+
+
+
+
+
 
 
 
