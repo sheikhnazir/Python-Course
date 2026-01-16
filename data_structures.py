@@ -165,13 +165,59 @@ if __name__ == "__main__":
     # Checking the number of items (key-value pairs) in the dictionary
     print("\nDictionary Length:", len(my_car))
 
+    # --- NESTED DICTIONARY ---
+    # A nested dictionary is a collection of dictionaries inside a single dictionary.
 
+    # A simple dictionary representing one employee
+    employee = {
+        "name": "Owais",
+        "role": "DA",
+        "Age": "29",
+    }
 
+    # The 'office' dictionary contains other dictionaries as its values
+    office = {
+        "Employee_1": {
+            "name": "Owais",
+            "role": "DA",
+            "Age": "29",
+        },
+        "Employee_2": {
+            "name": "Javeria",
+            "role": "Data Scientist",
+            "Age": "25",
+        },
+    }
 
+    # Accessing the entire dictionary of Employee_1
+    print(office["Employee_1"])
 
+    # Accessing specific nested values (indexing into the first layer, then the second)
+    # Syntax: dictionary[outer_key][inner_key]
+    print(office["Employee_1"]["role"], office["Employee_1"]["Age"])
 
+    # Modifying a value deep inside the nested structure
+    office["Employee_1"]["role"] = "Data Analyst"
+    print(office["Employee_1"])
 
+    # --- ITERATING THROUGH NESTED DICTIONARIES ---
 
+    print("\n--- Office Directory ---")
 
+    # Method 1: Iterating through keys and accessing nested values
+    for emp_id in office:
+        print(f"ID: {emp_id}")
+        print(f"Name: {office[emp_id]['name']}")
 
+    # Method 2: Iterating through the inner dictionaries directly
+    print("\n--- Detailed Roles ---")
+    for details in office.values():
+        # 'details' represents the inner dictionary
+        print(f"Employee Name: {details['name']} works as {details['role']}")
 
+    # Method 3: Iterating through both Outer and Inner items (Best for deep access)
+    print("\n--- Full Data Dump ---")
+    for emp_id, emp_info in office.items():
+        print(f"\nReport for {emp_id}:")
+        for key, value in emp_info.items():
+            print(f"  {key}: {value}")
