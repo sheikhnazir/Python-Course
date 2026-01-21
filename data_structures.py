@@ -61,8 +61,12 @@ if __name__ == "__main__":
     # ----------------------------
 
     # Loop through each element in the list
+    list_numbers = [19, 25, 89, 10, 15]
+    # n     = 19     25     89     10
+    # print = 19     25     89     10
     for n in list_numbers:
         print(n)
+        # print(n+10)
 
     # ----------------------------
     # SET → Unique elements & Fast lookup
@@ -210,14 +214,16 @@ if __name__ == "__main__":
         print(f"Name: {office[emp_id]['name']}")
 
     # Method 2: Iterating through the inner dictionaries directly
+    pincode = 28
+    print(f"pincode {pincode}")
     print("\n--- Detailed Roles ---")
-    for details in office.values():
+    for data in office.values():
         # 'details' represents the inner dictionary
-        print(f"Employee Name: {details['name']} works as {details['role']}")
+        print(f"Employee Role: {data['name']} works as {data['Age']}")
 
     # Method 3: Iterating through both Outer and Inner items (Best for deep access)
     print("\n--- Full Data Dump ---")
-    for emp_id, emp_info in office.items():
-        print(f"\nReport for {emp_id}:")
-        for key, value in emp_info.items():
+    for keys, values in office.items():
+        print(f"\n for {keys}:")
+        for key, value in values.items():
             print(f"  {key}: {value}")
