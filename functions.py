@@ -86,3 +86,5 @@ if __name__ == "__main__":
 #    → Returns "Hello <name>"
 # 2. Write a function to calculate sum of 3 numbers
 # 3. Convert Celsius to Fahrenheit
+
+
